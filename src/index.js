@@ -9,4 +9,4 @@ const hero = {
   defence: 10,
 };
 
-console.log(descript(hero));
+document.write(descript(hero));
