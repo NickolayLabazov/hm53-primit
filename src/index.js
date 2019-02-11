@@ -1,4 +1,4 @@
-import { descript } from './function.js';
+import descript from './function';
 
 const hero = {
   name: 'Лучник',
@@ -9,4 +9,4 @@ const hero = {
   defence: 10,
 };
 
-document.write(descript(hero));
+console.log(descript(hero));

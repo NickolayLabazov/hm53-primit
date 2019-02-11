@@ -1,30 +1,4 @@
-export const descript = (obj) => {
-  let smile = 0;
-  switch (obj.type) {
-    case 'Bowman':
-      smile = '&#x1F620';
-      break;
-
-    case 'Swordsman':
-      smile = '&#x1F621';
-      break;
-
-    case 'Magician':
-      smile = '&#x1F9D0';
-      break;
-
-    case 'Daemon':
-      smile = '&#x1F47F';
-      break;
-
-    case 'Undead':
-      smile = '&#x1F480';
-      break;
-
-    case 'Zombie':
-      smile = '&#x1F9DF';
-      break;
-  }
-  const result = `${smile}${obj.name[0]}(${obj.level}) &#x2694 ${obj.attack} &#x1F6E1 ${obj.defence} &#x2764 ${obj.health}`;
+export default function descript(obj) {
+  const result = `${(obj.type === 'Bowman') && String.fromCodePoint(0x1F620) || (obj.type === 'Swordsman') && String.fromCodePoint(0x1F621) || (obj.type === 'Magician') && String.fromCodePoint(0x1F9D0) || (obj.type === 'Daemon') && String.fromCodePoint(0x1F47F) || (obj.type === 'Undead') && String.fromCodePoint(0x1F480) || (obj.type === 'Zombie') && String.fromCodePoint(0x1F9DF)}${obj.name[0]}(${obj.level}) ${String.fromCodePoint(0x2694)} ${obj.attack} ${String.fromCodePoint(0x1F6E1)} ${obj.defence} ${String.fromCodePoint(0x2764)} ${obj.health}`;
   return result;
-};
+}
