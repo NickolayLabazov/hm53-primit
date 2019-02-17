@@ -2,6 +2,7 @@
     "extends": "airbnb-base",
     "rules": {
         "no-undef": "off",
+        "max-len": "off",        
         "no-mixed-operators": "off"
      }
 }
